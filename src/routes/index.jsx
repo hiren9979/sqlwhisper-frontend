@@ -1,17 +1,22 @@
 import { createBrowserRouter } from 'react-router-dom';
-import MainLayout from '../layouts/MainLayout';
-import Home from '../pages/Home';
+import AppLayout from '../layouts/AppLayout';
+import HomePage from '../pages/HomePage';
+import ChatPage from '../pages/ChatPage';
 import NotFound from '../pages/NotFound';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainLayout />,
+    element: <AppLayout />,
     errorElement: <NotFound />,
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <HomePage />,
+      },
+      {
+        path: 'chat/:chatId',
+        element: <ChatPage />,
       },
     ],
   },
