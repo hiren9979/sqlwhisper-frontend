@@ -1,0 +1,87 @@
+/* SQLWhisper Chat Styles */
+/* Simple, minimal, focused on content */
+
+.chat-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chat-page__empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.chat-page__empty h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+.chat-page__empty p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.chat-page__composer {
+  padding: var(--space-xl) 0;
+}
+
+/* Chat Composer */
+.chat-composer {
+  width: 100%;
+}
+
+.chat-composer__input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.chat-composer__input-wrapper:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.chat-composer__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: var(--space-sm) 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.chat-composer__input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.chat-composer__input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.chat-composer__send {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
