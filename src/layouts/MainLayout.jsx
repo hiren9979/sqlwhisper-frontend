@@ -1,24 +1,18 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 
 const MainLayout = () => {
   return (
-    <div className="main-layout">
-      <header className="header">
-        <div className="container">
-          <h1>Text-to-SQL</h1>
-        </div>
-      </header>
-      <main className="main-content">
-        <div className="container">
+    <div className="app-shell">
+      <Header />
+      <div className="app-body">
+        <Sidebar />
+        <main className="main-content">
           <Outlet />
-        </div>
-      </main>
-      <footer className="footer">
-        <div className="container">
-          <p>&copy; 2024 Text-to-SQL Frontend</p>
-        </div>
-      </footer>
+        </main>
+      </div>
     </div>
   );
 };
