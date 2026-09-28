@@ -7,22 +7,17 @@ export function ChatPage() {
   const [messages, setMessages] = useState([
     {
       role: 'user',
-      content: 'Show revenue for Gujarat in August.'
+      content: 'Show revenue.'
     },
     {
       role: 'assistant',
-      content: 'Revenue for Gujarat in August was ₹20.4M.',
-      sql: `SELECT 
-  region,
-  month,
-  revenue
-FROM revenue_data
-WHERE region = 'Gujarat'
-  AND month = 'August'
-ORDER BY revenue DESC;`,
-      result: [
-        { Region: 'Gujarat', Month: 'August', Revenue: '₹20.4M' }
-      ]
+      content: 'I need one more detail',
+      clarification: {
+        title: 'Which time period should I use?',
+        options: ['This month', 'Last month', 'This year', 'All time'],
+        allowCustom: true,
+        customPlaceholder: 'e.g. January 2026'
+      }
     }
   ])
 
@@ -42,6 +37,7 @@ ORDER BY revenue DESC;`,
               <AssistantMessage 
                 key={index} 
                 content={message.content}
+                clarification={message.clarification}
                 sql={message.sql}
                 result={message.result}
               />
