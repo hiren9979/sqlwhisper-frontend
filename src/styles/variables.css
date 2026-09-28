@@ -1,109 +1,84 @@
+/* SQLWhisper Design System - CSS Variables */
+/* Warm neutral + muted green palette */
+
 :root {
-  /* Application Background - Modern, sophisticated palette */
-  --app-bg: #f5f7fa;
-  --app-bg-dark: #e8ecf1;
+  /* Colors */
+  --color-background: #F7F6F2;
+  --color-surface: #FFFFFF;
+  --color-primary: #30483B;
+  --color-primary-hover: #253A30;
+  --color-accent: #B78B5A;
+  --color-text: #252824;
+  --color-text-secondary: #6B7069;
+  --color-border: #E3E1DA;
+  --color-success: #527A62;
+  --color-warning: #B58A4A;
+  --color-error: #A65D55;
 
-  /* Sidebar Background - Clean, contemporary */
-  --sidebar-bg: #ffffff;
-  --sidebar-bg-dark: #f8fafc;
+  /* Light variants for backgrounds and overlays */
+  --color-primary-light: rgba(48, 72, 59, 0.08);
+  --color-success-light: rgba(82, 122, 98, 0.1);
+  --color-warning-light: rgba(181, 138, 74, 0.1);
+  --color-error-light: rgba(166, 93, 85, 0.1);
 
-  /* Main Content Background - Pure, clean white */
-  --content-bg: #ffffff;
-  --content-bg-secondary: #f8fafc;
+  /* Border radius - minimal, not excessive */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
 
-  /* Primary Action Color - Modern indigo/violet */
-  --primary-color: #6366f1;
-  --primary-hover: #4f46e5;
-  --primary-light: #e0e7ff;
-  --primary-dark: #4338ca;
+  /* Shadows - subtle, not glowing */
+  --shadow-sm: 0 1px 2px rgba(37, 40, 36, 0.05);
+  --shadow-md: 0 2px 4px rgba(37, 40, 36, 0.08);
+  --shadow-lg: 0 4px 8px rgba(37, 40, 36, 0.1);
+  --shadow-xl: 0 8px 16px rgba(37, 40, 36, 0.12);
 
-  /* Text Colors - Better contrast and readability */
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --text-light: #f1f5f9;
-  --text-dark: #0f172a;
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
 
-  /* Border Colors - Subtle, sophisticated */
-  --border-color: #e2e8f0;
-  --border-light: #f1f5f9;
-  --border-dark: #cbd5e1;
+  /* Typography */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 
-  /* Status Colors - Modern, muted tones */
-  --success-color: #10b981;
-  --success-bg: #d1fae5;
-  --danger-color: #ef4444;
-  --danger-bg: #fee2e2;
-  --warning-color: #f59e0b;
-  --warning-bg: #fef3c7;
-  --info-color: #3b82f6;
-  --info-bg: #dbeafe;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
 
-  /* Border Radius - More modern, rounded approach */
-  --border-radius-sm: 0.375rem;
-  --border-radius: 0.5rem;
-  --border-radius-lg: 0.75rem;
-  --border-radius-xl: 1.25rem;
-
-  /* Shadows - Soft, contemporary shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-
-  /* Spacing - More refined spacing system */
-  --spacing-xs: 0.375rem;
-  --spacing-sm: 0.75rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-xxl: 3rem;
-
-  /* Typography - Modern font stack and sizing */
-  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --font-family-monospace: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco,
-    Consolas, 'Liberation Mono', 'Courier New', monospace;
-  
-  --font-size-xs: 0.8125rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-
-  --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
   --line-height-tight: 1.25;
-  --line-height-base: 1.6;
+  --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
 
-  /* Input Styles - Modern input styling */
-  --input-bg: #ffffff;
-  --input-border: #e2e8f0;
-  --input-border-focus: #6366f1;
-  --input-placeholder: #94a3b8;
-  --input-disabled-bg: #f1f5f9;
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
 
-  /* Button Styles - Updated with new primary color */
-  --btn-primary-bg: #6366f1;
-  --btn-primary-border: #6366f1;
-  --btn-primary-hover: #4f46e5;
-  --btn-secondary-bg: #64748b;
-  --btn-secondary-border: #64748b;
-  --btn-secondary-hover: #475569;
-  --btn-outline-color: #6366f1;
-  --btn-outline-hover-bg: #6366f1;
+  /* Z-index scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
 
-  /* Component Specific - Modern dimensions */
+  /* Layout */
   --sidebar-width: 280px;
-  --header-height: 64px;
-  --footer-height: 50px;
-  --card-bg: #ffffff;
-  --card-border: #e2e8f0;
+  --header-height: 56px;
+  --border-width: 1px;
 }
