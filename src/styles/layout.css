@@ -1,0 +1,168 @@
+/* SQLWhisper Layout Styles */
+/* Subtle, professional application shell */
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+/* Header - subtle and minimal */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 var(--space-lg);
+  background-color: var(--color-surface);
+  border-bottom: var(--border-width) solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.app-header__logo h1 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.app-header__user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* Layout body */
+.app-layout__body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.app-sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--color-surface);
+  border-right: var(--border-width) solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.btn-new-chat {
+  margin: var(--space-md);
+  width: calc(100% - var(--space-lg));
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* Sidebar sections */
+.sidebar-section {
+  padding: var(--space-md);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.sidebar-section:last-child {
+  border-bottom: none;
+}
+
+.sidebar-section__title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 var(--space-sm) 0;
+}
+
+/* Chat list */
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.chat-item:hover {
+  background-color: var(--color-primary-light);
+}
+
+.chat-item--active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.chat-item__title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Main content area */
+.app-layout__main {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-xl);
+}
+
+/* Home page */
+.home-page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page__empty {
+  text-align: center;
+  max-width: 400px;
+}
+
+.home-page__empty h2 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+.home-page__empty p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Responsive sidebar */
+@media (max-width: 768px) {
+  .app-sidebar {
+    position: fixed;
+    left: 0;
+    top: var(--header-height);
+    bottom: 0;
+    z-index: var(--z-fixed);
+    transform: translateX(-100%);
+    transition: transform var(--transition-base);
+  }
+
+  .app-sidebar--open {
+    transform: translateX(0);
+  }
+
+  .app-layout__main {
+    padding: var(--space-md);
+  }
+}
