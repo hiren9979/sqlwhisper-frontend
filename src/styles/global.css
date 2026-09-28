@@ -282,11 +282,6 @@ body {
   padding: 2rem 0;
 }
 
-.home h1 {
-  margin-bottom: 1rem;
-  color: #333;
-}
-
 .not-found {
   text-align: center;
   padding: 4rem 0;
@@ -294,7 +289,7 @@ body {
 
 .not-found h1 {
   font-size: 4rem;
-  color: #dc3545;
+  color: var(--danger-color);
   margin-bottom: 1rem;
 }
 
