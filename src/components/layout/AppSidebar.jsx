@@ -15,7 +15,7 @@ export function AppSidebar({ isCollapsed, onToggleCollapse }) {
               {isCollapsed ? (
                 <span className="chat-item__icon">R</span>
               ) : (
-                <span className="chat-item__title">Revenue by Gujarat</span>
+                <span className="chat-item__title">Revenue for Gujarat</span>
               )}
             </div>
             <div className="chat-item">

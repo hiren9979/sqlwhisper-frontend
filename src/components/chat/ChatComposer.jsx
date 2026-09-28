@@ -5,7 +5,7 @@ export function ChatComposer() {
         <input 
           type="text" 
           className="chat-composer__input"
-          placeholder="Ask something about your data"
+          placeholder="Ask a follow-up question..."
         />
         <button className="btn btn-primary chat-composer__send">
           ➤
